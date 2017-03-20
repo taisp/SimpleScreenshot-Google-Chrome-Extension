@@ -1,0 +1,38 @@
+{
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": ""
+  },
+  "default_locale": "en",
+  "description": "",
+  "icons": {
+    "128": "icon.png"
+  },
+  "manifest_version": 2,
+  "name": "Simple screenshot",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "version": "1",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "/skin/js/jquery.min.js",
+        "/skin/js/Jcrop.js",
+        "/skin/js/page.js"
+
+      ],
+      "css": [
+        "/skin/css/Jcrop.css",
+        "/skin/css/style.css"
+      ]
+    }
+  ]
+}

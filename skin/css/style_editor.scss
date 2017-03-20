@@ -1,0 +1,60 @@
+body {
+  background: #225b83;
+
+  .editor_box {
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+
+    .image_cropped {
+      max-width: 100%;
+      height: auto;
+      -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+      display: inline-block;
+    }
+
+    .control_box {
+
+      text-align: right;
+      margin: 20px 0px;
+
+      top: 10px;
+      .save_button, .upload_to_server_button {
+        background: #ffa800;
+        right: -20px;
+        font-size: 15px;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 50px;
+        border-radius: 3px;
+        text-shadow: 1px 1px 0px #000000;
+
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+        margin-left: 10px;
+
+      }
+
+      .upload_to_server_button {
+        background: red;
+      }
+
+      .upload_to_server_button.load {
+        background: red url(../img/8.gif) no-repeat 10px center;
+        background-size: 20px;
+        opacity: 0.6;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .copyright_text {
+    color: #ffffff;
+    font-style: italic;
+  }
+}
