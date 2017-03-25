@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title class="localed_string">Title</title>
     <link rel="stylesheet" href="skin/css/style_editor.css">
     <script type="text/javascript" src="skin/js/jquery.min.js"></script>
     <script type="text/javascript" src="skin/js/editor.js"></script>
@@ -10,11 +10,11 @@
 <body>
 <div class="editor_box">
     <div class="control_box">
-        <a download="screen.png" href="#" class="save_button">Save</a>
-        <a href="#" class="upload_to_server_button">Upload to server</a>
+        <a download="screen.png" href="#" class="save_button"><span class="localed_string" data-l="Save">Save</span></a>
+        <a href="#" class="upload_to_server_button"><span class="localed_string" data-l="UploadtoServer">Upload to server</span></a>
     </div>
-    <img src="#" class="image_cropped">
-    <p class="copyright_text">Sergey Savenko © 2017</p>
+    <img src="#" class="image_cropped" id="image_cropped">
+    <p class="copyright_text localed_string">Sergey Savenko © 2017</p>
 </div>
 </body>
 </html>

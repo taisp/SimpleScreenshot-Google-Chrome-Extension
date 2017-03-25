@@ -1,10 +1,10 @@
 <?php
-
+$fileExsist = null;
 if (!empty($_GET['image']))
 {
     $upload_derictory = dirname(__FILE__).'/uploads/';
-    $file_exsist = file_exists($upload_derictory.$_GET['image'].'.png');
-    $file_url = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/uploads/'.$_GET['image'].'.png';
+    $fileExsist = file_exists($upload_derictory.$_GET['image'].'.png');
+    $fileUrl = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/uploads/'.$_GET['image'].'.png';
 }
 ?>
 <!DOCTYPE html>
@@ -14,10 +14,10 @@ if (!empty($_GET['image']))
     <link rel="stylesheet" href="skin/style.css">
 </head>
 <body>
-<?php if ($file_exsist)
+<?php if ($fileExsist)
 { ?>
     <div class="editor_box">
-        <img src="<?php echo $file_url; ?>" class="image_cropped">
+        <img src="<?php echo $fileUrl; ?>" class="image_cropped">
         <p class="copyright_text">Sergey Savenko © 2017</p>
     </div>
 <?php } else

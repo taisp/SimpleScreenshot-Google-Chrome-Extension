@@ -2,22 +2,22 @@
 
 if ($_POST['action'] == 'upload_screen' && !empty($_FILES['upload_file']))
 {
-    $return_arr = array();
-    $return_arr['success'] = 0;
+    $returnArr = array();
+    $returnArr['success'] = 0;
     /*Create and write image file*/
-    $file_hash = md5(time()).rand(0, 99999);
-    $upload_derictory = dirname(__FILE__).'/uploads/';
-    $file_name = $file_hash.'.png';
+    $fileHash = md5(time()).rand(0, 99999);
+    $uploadDerictory = dirname(__FILE__).'/uploads/';
+    $fileName = $fileHash.'.png';
 
 
-    if (move_uploaded_file($_FILES['upload_file']['tmp_name'], $upload_derictory.$file_name))
+    if (move_uploaded_file($_FILES['upload_file']['tmp_name'], $uploadDerictory.$fileName))
     {
-        $return_arr['success'] = 1;
-        $return_arr['redirect_url'] = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/view.php?image='.$file_hash;
+        $returnArr['success'] = 1;
+        $returnArr['redirect_url'] = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/view.php?image='.$fileHash;
 
     }
     /*Create and write image file end*/
 
-    echo json_encode($return_arr);
+    echo json_encode($returnArr);
     exit;
 }
